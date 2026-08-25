@@ -23,7 +23,14 @@ public final class Router<Route: Hashable & Sendable> {
 
     #if canImport(Combine)
     /// Combine publisher driving SwiftUI updates on Apple platforms.
-    public let objectWillChange = ObservableObjectPublisher()
+    ///
+    /// `ObservableObject.objectWillChange` is a *nonisolated* protocol
+    /// requirement, so the witness must be reachable from outside the main
+    /// actor even though `Router` itself is `@MainActor`. This is safe:
+    /// `ObservableObjectPublisher` is internally thread-safe, and SwiftUI
+    /// only subscribes/fires it from the main thread, where every `Router`
+    /// mutation occurs.
+    nonisolated(unsafe) public let objectWillChange = ObservableObjectPublisher()
     #endif
 
     private var storage: [Route] = []
