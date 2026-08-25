@@ -3,7 +3,7 @@
 [![CI](https://github.com/wiradifit/swiftui-blueprint/actions/workflows/ci.yml/badge.svg)](https://github.com/wiradifit/swiftui-blueprint/actions/workflows/ci.yml)
 ![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)
 ![Platforms](https://img.shields.io/badge/platforms-iOS%2016%20·%20macOS%2013%20·%20tvOS%2016%20·%20watchOS%209-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+![License](https://img.shields.io/badge/license-PolyForm_Noncommercial_1.0.0-blue.svg)
 
 **A production-grade SwiftUI app foundation kit.** Type-safe navigation,
 declarative design tokens, a retry-aware async networking client, and a tiny
