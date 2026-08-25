@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(Combine)
+import Combine
+#endif
 
 /// Headless, platform-neutral navigation state machine driving a
 /// `NavigationStack` on Apple platforms (see ``RouterView``).
